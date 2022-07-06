@@ -8,6 +8,7 @@ namespace QuokkaDev.Saas.Options
     /// </summary>
     /// <typeparam name="TOptions"></typeparam>
     /// <typeparam name="TTenant"></typeparam>
+    /// <typeparam name="TKey"></typeparam>
     public class TenantOptionsFactory<TOptions, TTenant, TKey> : IOptionsFactory<TOptions>
         where TOptions : class, new()
         where TTenant : Tenant<TKey>

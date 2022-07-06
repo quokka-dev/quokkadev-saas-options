@@ -30,10 +30,7 @@ namespace QuokkaDev.Saas.Options.Tests
             var factory = new TenantOptionsFactory<TestOptions, Tenant<int>, int>(
                 setups,
                 postConfigureSetups,
-                (opts, tenant) =>
-                {
-                    opts.Tenant = "configured-tenant";
-                },
+                (opts, _) => opts.Tenant = "configured-tenant",
                 tenantAccessorMock.Object
                 );
 
