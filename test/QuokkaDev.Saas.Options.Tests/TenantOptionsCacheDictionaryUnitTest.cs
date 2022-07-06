@@ -19,6 +19,8 @@ namespace QuokkaDev.Saas.Options.Tests
             var cache1 = dictionary.Get("my-tenant-identifier");
             var cache2 = dictionary.Get("test");
             var cache3 = dictionary.Get("my-tenant-identifier");
+            var cache4 = dictionary.Get(null);
+            var cache5 = dictionary.Get(null);
 
             // Assert
             cache1.Should().NotBeNull();
@@ -28,6 +30,7 @@ namespace QuokkaDev.Saas.Options.Tests
             cache1.Should().NotBeSameAs(cache2);
             cache2.Should().NotBeSameAs(cache3);
             cache3.Should().BeSameAs(cache1);
+            cache4.Should().BeSameAs(cache5);
         }
     }
 }

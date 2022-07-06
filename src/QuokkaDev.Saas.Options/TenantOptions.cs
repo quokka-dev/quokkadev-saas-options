@@ -5,7 +5,9 @@ namespace QuokkaDev.Saas.Options
     /// <summary>
     /// Make IOptions tenant aware
     /// </summary>
+#pragma warning disable S101 // Types should be named in PascalCase
     public class IOptions<TOptions> : IOptionsSnapshot<TOptions>
+#pragma warning restore S101 // Types should be named in PascalCase
         where TOptions : class, new()
     {
         private readonly IOptionsFactory<TOptions> _factory;
